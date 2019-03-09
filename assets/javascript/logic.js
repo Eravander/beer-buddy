@@ -50,3 +50,4 @@ function initMap() {
   // The marker, positioned at charlotte
   var marker = new google.maps.Marker({position: charlotte, map: map});
 }
+
