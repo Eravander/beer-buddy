@@ -11,7 +11,7 @@ function callBeer() {
 //     type: "beer",
 //     withBreweries: "Y",
 //     withLocations: "Y",
-//     key: "d06f72cfa4d269c5b3840f2ed2b5988c"
+//     key: ""
 //   } 
 // }).then(function (response) {
 //   console.log(response)
@@ -39,3 +39,14 @@ console.log(response)
 };
 
 callBeer();
+
+// Initialize and add the map
+function initMap() {
+  // The location of charlotte
+  var charlotte = {lat: 35.227085, lng: -80.843124};
+  // The map, centered at charlotte
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: charlotte});
+  // The marker, positioned at charlotte
+  var marker = new google.maps.Marker({position: charlotte, map: map});
+}
