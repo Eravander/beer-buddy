@@ -1,3 +1,106 @@
+/*.app-title{
+  text-align: center;
+}*/
+
+
+.beer-buddy-title{
+    clear: both;
+    text-align: center;
+    font-size: 100px;
+    position: relative;
+    top: 90px;
+  }
+  
+  #intruction-link,
+    #home-link{
+    display: inline;
+    padding-right: 20px;
+  }
+  
+  ul{
+    text-decoration: none;
+    padding: 0;
+  }
+  #intruction-link{
+    position: relative;
+    right: 60px;
+  }
+  #home-link{
+  position: relative;
+  /* when search is display none move  this element over*/
+  left: 79%;
+  }
+  
+  .search-nav-text{
+  position: relative;
+  top: 36px;
+  right:45px;
+  }
+  
+  .search-option {
+    float: right;
+    /* using absolute position will have to fixed to create sticky effect later*/
+    position: relative;
+    top: -85px;
+  }
+  
+  .middle-container{
+    
+    width: 80%;
+    border: 1px solid black;
+    height: 500px;
+    position: absolute;
+    left: 10%;
+  }
+  
+  .title-container{
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .search{
+  
+  }
+  
+  .search-text{
+    position: relative;
+    left: 30%; 
+  }
+  
+  
+  #beer-search{
+  position: relative;
+  left: 25%;
+  width: 50%;
+  height: 50px;
+  top: 60px;
+  }
+  
+  .btn{
+  position: relative;
+  left: 45%;
+  width: 10%;
+  top: 80px;
+  }
+  
+  .beer-search-container{
+  width: 80%;
+  position: relative;
+  left: 10%;
+  border: 1px solid black;
+  }
+  
+  .result{
+    position: relative;
+    width: 40%;
+    border-bottom: 1px solid black;
+    left: 
+  }
+  
+  .hide{
+    /*display:none;*/
+  }
+
 #map {
     height: 400px;  /* The height is 400 pixels */
     width: 100%;  /* The width is the width of the web page */
