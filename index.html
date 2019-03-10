@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Project</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -11,6 +12,50 @@
     <h3>My Google Maps Demo</h3>
     <!--The div element for the map -->
     <div id="map"></div>
+
+    <div class="main-container">
+        <ul>
+            <li id="home-link"><a href="#home">Home</a></li>
+          <!--<li id="about"><a href="#about">About the team</a></li> --> 
+            <li id="intruction-link"><a href="#news">How the app works</a></li> 
+        </ul>
+  
+        <div class="search-option hide">
+            <label for="search"><p class="search-nav-text">Search</p></label>
+            
+            <input type="text" class="form-control" id="beer-nav-search" placeholder="Search Your Favorite Beer">
+        </div>
+        
+  
+      <h1 class="beer-buddy-title">Beer Buddy</h1>
+  
+      <form>
+          <div class="form-group">
+            <label for="search"><h2 class="search-text"></h2></label>
+            <input type="text" class="form-control" id="beer-search" placeholder="Search Your Favorite Beer">
+          </div>
+          <button type="submit" class="btn btn-primary">Find My Beer Now!</button>
+     </form>
+  
+     <div class="beer-search-container hide">
+       <div class="result">
+         <img class="beer-image">
+         <div class="beer-name"><a href="#beer">Beer Name</a></div>
+         <ol>
+           <li>Brewery</li>
+           <li>Style</li>
+           <li>beer :</li>
+           <li><a href="#directions">Directions</a></li>
+  
+         </ol>
+  
+       </div>
+  
+  
+     </div>
+  
+  
+    </div>
   
 
 
@@ -24,3 +69,5 @@
   <script src="assets/logic.js"></script>
 </body>
 </html>
+
+
