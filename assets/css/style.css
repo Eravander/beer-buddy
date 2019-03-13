@@ -199,20 +199,15 @@ display: block;
     border: none;
     border-left: 1px solid gray;
   }
-  .map-container{
-   
-  }
+  
   
 #map {
-   
     height: 400px;  /* The height is 400 pixels */
     width: 500px;  /* The width is the width of the web page */
-   
-   display: none;
+    display: none;
     left: 60%;
-    
     position: absolute;
     overflow: hidden;
-    display: block;
-    top: 0;
+    
+    bottom: 90px;
    }

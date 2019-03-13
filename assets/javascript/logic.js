@@ -86,7 +86,7 @@ var directions = "directions"
 
   function pageTwo(){
 
-    
+
     $(".beer-search-container").html($("<div>", {class:"result" }))
     $(".result").html($("<img>", {class:"beer-image" }))
     $(".beer-image").after($("<div>", {class:"beer-name" }))
@@ -132,7 +132,7 @@ var directions = "directions"
    
   
    var link2 = $("<a>");
-    link2.attr("href", "#directions");
+    link2.attr("href", directions);
     link2.text(directions);
     //link2.addClass("beer-link2");
   
