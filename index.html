@@ -2,150 +2,99 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Tanya added Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-  <link rel="icon" type="image/png" href="assets/images/beericon.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--<script type="text/javascript" id="AgeVerifyScript" data-template="hops" data-age="21" data-method="MDY"
+        data-cookielength="30" data-prompttextdob="Welcome!<br /><br />You must be 21 to enter" data-yytext="YYYY"
+        data-mmtext="MM" data-ddtext="DD" data-underageredirect="https://ageverify.co"
+        src="https://av.ageverify.co/jsv6/dob.js"></script>-->
+
+  <title>Project</title>
+ 
   <link rel="stylesheet" href="assets/style.css">
-  <title>Beer Buddy</title>
+  <!-- NEED TO ADJUST CSS FOR RESET! <link rel="stylesheet" href="assets/css/reset.css"> -->
 </head>
 
-<body>
-  <!-- Container Div -->
-  <div class="container">
-    <!-- Section 1: Navbar-->
-    <div class="menu">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Beer Buddy</a>
+<body background="assets\css\images\wil-stewart-245622-unsplash.jpg" style="background-size: 1366px 768px">
+  <ul class="nav-bar2-container">
+    <li class="nav-bar2"><a class="active" href="#home">
+        <h1 id="buddy">Beer Buddy</h1>
+      </a></li>
+    <li class="nav-bar2"><a href="#home">Home</a></li>
+    <li class="nav-bar2"><a href="#news">How the app works</a></li>
+    <li class="nav-bar2"><a href="#about">About Team</a></li>
+  </ul>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#news">How the app works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://trello.com/b/kfnJxsnE/beerbuddy-work" tabindex="-1">Our Team</a>
-          </li>
-      </div>
-    </nav>
-    </div>
-    <!-- End of nav bar-->
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
 
-    <div class="main-container">
+
+  <div class="main-container">
+
+    <div class="link-container">
       <ul>
-        <li id="home-link">
-          <a href="#home">Home</a>
-        </li>
+        <li id="home-link"><a href="#home">Home</a></li>
         <!--<li id="about"><a href="#about">About the team</a></li> -->
-        <li id="intruction-link">
-          <a href="#news">How the app works</a>
-        </li>
+        <li id="intruction-link"><a href="#news">How the app works</a></li>
       </ul>
 
-      <div class="search-option hide">
-        <label for="search">
-          <p class="search-nav-text">Search</p>
-        </label>
-
-        <input type="text" class="form-control" id="beer-nav-search" placeholder="Search Your Favorite Beer">
-      </div>
-
-
-      <h1 class="beer-buddy-title">Beer Buddy</h1>
-
-      <form>
-        <div class="form-group">
-          <label for="search">
-            <h2 class="search-text"></h2>
-          </label>
-          <input type="text" class="form-control" id="beer-search" placeholder="Search Your Favorite Beer">
-        </div>
-        <button type="submit" class="btn btn-primary">Find My Beer Now!</button>
-      </form>
-
-      <div class="beer-search-container hide">
-        <div class="result">
-          <img class="beer-image">
-          <div class="beer-name">
-            <a href="#beer">Beer Name</a>
-          </div>
-          <ol>
-            <li>Brewery</li>
-            <li>Style</li>
-            <li>beer :</li>
-            <li>
-              <a href="#directions">Directions</a>
-            </li>
-
-          </ol>
-
-        </div>
-
-
-      </div>
-
-
     </div>
+
+    <div class="search-option hide">
+      <label for="search">
+        <p class="search-nav-text">Search</p>
+      </label>
+      <!--put search button-->
+      <input type="text" class="form-control round" id="beer-nav-search" placeholder="Search Your Favorite Beer">
+    </div>
+
+
+    <h1 class="beer-buddy-title">Beer Buddy</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="search">
+          <h2 class="search-text"></h2>
+        </label>
+        <input type="text" class="form-control round" id="beer-search" placeholder="Search Your Favorite Beer">
+      </div>
+      <button id="primary-search" type="submit" class="btn btn-primary ">Find My Beer Now!</button>
+    </form>
+    <div class="beer-search-container hide">
+
+    <!--
+         <div class="result">
+         <img class="beer-image">
+         <div class="beer-name"><a href="#beer">Beer Name</a></div>
+         <ol>
+           <li>Brewery</li>
+           <li>Style</li>
+           <li>beer :</li>
+           <li><a href="#directions">Directions</a></li>
+  
+         </ol>-->
 
   </div>
 
 
-    <script src="config.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="assets/logic.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"></script>
-</body>
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="footer-copyright text-center py-3">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-        <div>
-          <a href="https://www.pinterest.com/thinkmule/beer/?lp=true">
-            <i class="fa fa-beer"></i>
-          </a>
-          <a href="hhttps://www.pinterest.com/thinkmule/beer/?lp=true">
-            <i class="fa fa-pinterest"></i>
-          </a>
-          <a href="https://trello.com/b/kfnJxsnE/beerbuddy-work">
-            <i class="fa fa-users"></i>
-          </a>
-        </div>
-      </div>
+  </div>
 
-      <div class="footer-copyright text-center py-3">© 2019 Copyright </div>
-</footer>
+ 
+  </div>
+
+
+
+
+
+  <!--<script src="config.js"></script>-->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script type="text/javascript" src="assets/logic.js"></script>
+</body>
 
 </html>

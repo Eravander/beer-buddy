@@ -1,53 +1,131 @@
-function callBeer() {
+$(document).ready(function(){
+  // function callBeer() {
   
-  var queryURL =  "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/search";
+  //   var queryURL =  "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/search";
+  
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET",
+  //   data: {
+  //     q: "sugar creek",
+  //     type: "brewery",
+  //     type: "beer",
+  //     withBreweries: "Y",
+  //     withLocations: "Y",
+  //     key: ""
+  //   } 
+  // }).then(function (response) {
+  //   console.log(response)
+  
+  //   });
+  
+  //   };
+  
+  //   callBeer();
+  
+  // $.ajax({
+  // url: queryURL,
+  // method: "GET",
+  // data: {
+  //   q: "American IPA",
+  //   withBreweries: "Y",
+  //   withLocations: "Y",
+  //   key: config
+  // } 
+  // }).then(function (response) {
+  // console.log(response)
+  
+  // });
+  
+  // };
+  
+  // callBeer();
+  
+  // // Initialize and add the map
+  //  function initMap() {
+  // //   // The location of charlotte
+  //   var charlotte = {lat: 35.227085, lng: -80.843124};
+  //  // The map, centered at charlotte
+  //  var map = new google.maps.Map(
+  //    document.getElementById('map'), {zoom: 10, center: charlotte});
+  //  // The marker, positioned at charlotte
+  //  var marker = new google.maps.Marker({position: charlotte, map: map});
+  // }
+  
+  
+  
+  $("#primary-search").click(function(){
+    event.preventDefault()
+  //  alert("hi")
+  //   $(".beer-buddy-title").fadeOut(7000)
+  //   $(".beer-search-container").fadeIn(10000)
+    //$(".beer-search-container").css({display: "block" })
+   $(".beer-search-container").css({display:"block"})
+   $(".beer-buddy-title").css({display:"none"})
+   $("#beer-search").css({display:"none"})
+   $("#primary-search").css({display:"none"})
+   $(".search-option ").css({display:"block"})
+   $(".nav-bar2-container").css({display:"block"})
+   $(".link-container").css({display:"none"})
+   $(".search-option ").css({top:"-165px"})
+   $("#buddy").css({position:"relative"})
+   $("#buddy").css({top:"-30px"})
+  
 
-// $.ajax({
-//   url: queryURL,
-//   method: "GET",
-//   data: {
-//     q: "sugar creek",
-//     type: "brewery",
-//     type: "beer",
-//     withBreweries: "Y",
-//     withLocations: "Y",
-//     key: ""
-//   } 
-// }).then(function (response) {
-//   console.log(response)
+   $(".beer-search-container").html($("<div>", {class:"result" }))
+   $(".result").html($("<img>", {class:"beer-image" }))
+   $(".beer-image").after($("<div>", {class:"beer-name" }))
+   //anchor tags are missing links
+   var beer = "Ale"
 
-//   });
+   var link = $("<a>");
+   link.attr("href", "#beer");
+   link.text(beer);
+   link.addClass("beer-link");
 
-//   };
+   $(".beer-name").html(link);
+  // $(".beer-name").html($("<a>", {class:"beer-link" }))
+  // the ol elements need to be AFTER to the div then the first li need to be inside but the following need to be after()
+  $(".beer-link").after($("<ol>", {class:"list" }))
 
-//   callBeer();
+  var brewery = "Brewery"
+  
+  var li = $("<li>");
+   li.text(brewery)
+   li.addClass("list-catorgorey");
+   $(".list").html(li)
+  //$(".list").html($("<li>", {class:"list-catorgorey" }))
+  //$(".list-catorgorey").html({text:brewery })
+  
 
-$.ajax({
-url: queryURL,
-method: "GET",
-data: {
-  q: "American IPA",
-  withBreweries: "Y",
-  withLocations: "Y",
-  key: config
-} 
-}).then(function (response) {
-console.log(response)
+  $(".list-catorgorey").after($("<li>",{text:brewery }))
+  $(".list-catorgorey").after($("<li>",{text:brewery }))
+  $(".list-catorgorey").after($("<li>",{class:"beer-link2" }))
 
-});
+  var directions = "directions"
 
-};
+  var link2 = $("<a>");
+   link2.attr("href", "#directions");
+   link2.text(directions);
+   //link2.addClass("beer-link2");
 
-callBeer();
+   $(".beer-link2").html(link2);
+  // li below doesn't work correctly anchor is placed inside but cannot add attribute
+  //$(".list-catorgorey").after($("<li>"+ "<a>", {href:"list-catorgorey" } + "</a>" + "</li>"))
+  
+   
 
-// Initialize and add the map
-function initMap() {
-  // The location of charlotte
-  var charlotte = {lat: 35.227085, lng: -80.843124};
-  // The map, centered at charlotte
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 10, center: charlotte});
-  // The marker, positioned at charlotte
-  var marker = new google.maps.Marker({position: charlotte, map: map});
-}
+
+
+
+  // works but li elements are empty $(".list").append($("<li>" + "name")).append("<li>").append("<li>" ).append("<li>")
+   
+   
+
+
+
+
+  })
+})
+
 
