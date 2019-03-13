@@ -2,149 +2,296 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- Tanya added Bootstrap CSS -->
+	  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+	<title>Beer Buddy</title>
+	<link rel="shortcut icon" href="assets/images/beericon.jpg">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Tanya added Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-  <link rel="icon" type="image/png" href="assets/images/beericon.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Beer Buddy</title>
 </head>
 
-<body>
-  <!-- Container Div -->
-  <div class="container">
-    <!-- Section 1: Navbar-->
-    <div class="menu">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Beer Buddy</a>
+<body data-spy="scroll" data-target="#navbarResponsive">
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#news">How the app works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://trello.com/b/kfnJxsnE/beerbuddy-work" tabindex="-1">Our Team</a>
-          </li>
-      </div>
-    </nav>
-    </div>
-    <!-- End of nav bar-->
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+	<!--- Start Home Section -->
+	<div id="home">
+		<!--- Navigation -->
+		<nav class="navbar navbar-expand-md fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="#img" alt="">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="custom-toggler-icon">
+						<i class="fas fa-bars"></i>
+					</span>
+				</button>
 
-    <div class="main-container">
-      <ul>
-        <li id="home-link">
-          <a href="#home">Home</a>
-        </li>
-        <!--<li id="about"><a href="#about">About the team</a></li> -->
-        <li id="intruction-link">
-          <a href="#news">How the app works</a>
-        </li>
-      </ul>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">How this app works</a>
+						</li>
 
-      <div class="search-option hide">
-        <label for="search">
-          <p class="search-nav-text">Search</p>
-        </label>
+						<li class="nav-item">
+							<a class="nav-link" href="https://trello.com/b/kfnJxsnE/beerbuddy-work">Team's Board</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<!--- End Navigation -->
 
-        <input type="text" class="form-control" id="beer-nav-search" placeholder="Search Your Favorite Beer">
-      </div>
+		<!--- Sexy Header Image -->
+		<div class="header">
+			<div class="home-wrap">
+				<div class="home-inner">
+				</div>
+			</div>
+		</div>
+		<!--- End Header Image -->
 
+		<!--- App logo -->
+		<div class="caption center-block text-center">
+			<h3>Beer Buddy</h3>
+			<a class="btn btn-outline-dark" href="#about">Get Started</a>
+		</div>
+	</div>
+	<!--- End Home Section -->
 
-      <h1 class="beer-buddy-title">Beer Buddy</h1>
-
-      <form>
-        <div class="form-group">
-          <label for="search">
-            <h2 class="search-text"></h2>
-          </label>
-          <input type="text" class="form-control" id="beer-search" placeholder="Search Your Favorite Beer">
-        </div>
-        <button type="submit" class="btn btn-primary">Find My Beer Now!</button>
-      </form>
-
-      <div class="beer-search-container hide">
-        <div class="result">
-          <img class="beer-image">
-          <div class="beer-name">
-            <a href="#beer">Beer Name</a>
+	<!--- Start About Section -->
+	<div id="about" class="offset">
+		<div class="heading-underline"></div>
+		<div class="row narrow">
+			<div class="col-md-4">
+				<div class="about text-center">
+					<i class="fas fa-desktop fa-3x"></i>
+					<h3>Beer Buddy</h3>
+					<p>connects craft beer fans with their favorite libations on iPhone, Android and the web.</p>
+				</div>
+			</div>
+<!-- MAIN SEARCH BOX SECTION-->
+			<div class="col-md-4">
+				<div class="about text-center">
+					<i class="fas fa-arrow-circle-down fa-3x"></i>
+					<h3>To Get Started</h3>
+					<p>Type your favorite beer's name, style or brewery below and click Enter</p>
+				</div>
+			</div>
+			<!-- Search box heading will go here-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+				<!-- Main Search box will go here-->
+					<div class="form-group">
+					  <label for="search">
+						<h2 class="search-text"></h2>
+					  </label>
+					  <input type="text" class="form-control" id="beer-search" placeholder="Search Your Favorite Beer">
+					</div>
+					<button type="submit" class="btn btn-primary">Find My Beer Now!</button>
+          </form>
           </div>
-          <ol>
-            <li>Brewery</li>
-            <li>Style</li>
-            <li>beer :</li>
-            <li>
-              <a href="#directions">Directions</a>
-            </li>
+          </div>
+          </div>
+			<!-- End of Search heading and Search box section-->
+			<!--Question: Search results should be displayed after the map?-->
+			<!--Geolocation results should go HERE-->
+			<div class="col-md-4">
+				<div class="about text-center">
+					<i class="fas fa-address-card fa-3x"></i>
+					<h3>Map</h3>
+					<p>Use the map provided below to find your favorite beer near you!</p>
+					<!--The div element for the map -->
+					<div id="map"></div>
+				</div>
+			</div>
+			<!--end of Map Geolocation section-->
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!--- Display Search Result Section -->
+	<div id="searchresult" class="offset">
+		<div class="jumbotron">
+			<h3 class="heading">Meet your new favorite</h3>
+			<div class="heading-underline"></div>
+			<!--Beer Search Result #1-->
+			<!-- Row 1 with 2 results per row on lg and md-->
+			<div class="row narrow">
+				<div class="col-md-6">
+					<div class="beer-search-container hide">
+						<div class="result">
+							<div class="card text-center">
+								<img class="card-img-top" src="#resultone" alt="Beer1's picture">
+								<div class="card-body">
+									<div class="beer-name">
+										<a href="#beer">Beer Name</a>
+									</div>
+									<ol>
+										<li>Brewery</li>
+										<li>Style</li>
+										<li>beer :</li>
+										<li>
+											<a href="#directions">Directions</a>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Search Result #2 still on row 1 for md and lg-->
+				<div class="col-md-6">
+					<div class="beer-search-container hide">
+						<div class="result">
+							<div class="card text-center">
+								<img class="card-img-top" src="#resulttwo" alt="Beer2's picture">
+								<div class="card-body">
+									<div class="beer-name">
+										<a href="#beer">Beer Name</a>
+									</div>
+									<ol>
+										<li>Brewery</li>
+										<li>Style</li>
+										<li>beer :</li>
+										<li>
+											<a href="#directions">Directions</a>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Row 2 for lg and md devices for Search Results 3 and 4-->
+			<!---Search result #3-->
+			<div class="row narrow">
+				<div class="col-md-6">
+					<div class="beer-search-container hide">
+						<div class="result">
+							<div class="card text-center">
+								<img class="card-img-top" src="#resultthree" alt="Beer 3 result">
+								<div class="card-body">
+									<div class="beer-name">
+										<a href="#beer">Beer Name</a>
+									</div>
+									<ol>
+										<li>Brewery</li>
+										<li>Style</li>
+										<li>beer :</li>
+										<li>
+											<a href="#directions">Directions</a>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Search result #4 still on row 2-->
+				<div class="col-md-6">
+					<div class="beer-search-container hide">
+						<div class="result">
+							<div class="card text-center">
+								<img class="card-img-top" src="#resultfour" alt="Beer 4 result">
+								<div class="card-body">
+									<div class="beer-name">
+										<a href="#beer">Beer Name</a>
+									</div>
+									<ol>
+										<li>Brewery</li>
+										<li>Style</li>
+										<li>beer :</li>
+										<li>
+											<a href="#directions">Directions</a>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Search result #5 on row 3 on lg xl and md-->
+			<!--Beer search result # 5-->
+			<div class="row narrow">
+				<div class="col-md-6">
+					<div class="beer-search-container hide">
+						<div class="result">
+							<div class="card text-center">
+								<img class="card-img-top" src="#resultfive" alt="Beer 5 result">
+								<div class="card-body">
+									<div class="beer-name">
+										<a href="#beer">Beer Name</a>
+									</div>
+									<ol>
+										<li>Brewery</li>
+										<li>Style</li>
+										<li>beer :</li>
+										<li>
+											<a href="#directions">Directions</a>
+										</li>
+									</ol>
 
-          </ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        </div>
+			</div>
+		</div>
+		<!--- End of Display Beer Search Results Section -->
+	</div>
+	</div>
+	<div class="container-fluid footer">
+		<!--copyright row-->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="footer-copyright text-center py-3">
+					<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+					<div>
+						<a href="https://www.pinterest.com/thinkmule/beer/?lp=true">
+							<i class="fa fa-beer"></i>
+						</a>
+						<a href="hhttps://www.pinterest.com/thinkmule/beer/?lp=true">
+							<i class="fa fa-pinterest"></i>
+						</a>
+						<a href="https://trello.com/b/kfnJxsnE/beerbuddy-work">
+							<i class="fa fa-users"></i>
+						</a>
+						<hr> &copy; 2019
+					</div>
+				</div>
+				<!--- End Row -->
+			</div>
+			<!--- End Container Footer -->
+		</div>
 
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-
-    <script src="assets/javascript/config.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="assets/javascript/logic.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"></script>
-      <script src="assets/javascript/logic.js"></script>
+		<script src="assets/javascript/config.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+		<script src="assets/javascript/logic.js"></script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+		 crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		 crossorigin="anonymous"></script>
+		<script src="assets/javascript/logic.js"></script>
 </body>
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="footer-copyright text-center py-3">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-        <div>
-          <a href="https://www.pinterest.com/thinkmule/beer/?lp=true">
-            <i class="fa fa-beer"></i>
-          </a>
-          <a href="hhttps://www.pinterest.com/thinkmule/beer/?lp=true">
-            <i class="fa fa-pinterest"></i>
-          </a>
-          <a href="https://trello.com/b/kfnJxsnE/beerbuddy-work">
-            <i class="fa fa-users"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-copyright text-center py-3">© 2019 Copyright </div>
-</footer>
 
 </html>

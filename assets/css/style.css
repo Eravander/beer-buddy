@@ -1,126 +1,214 @@
-.body {
-  width: 640px;
-  height: auto;
-  padding: 10px;
-  background-color: #ccc;
-  font-family: 'Lobster';
-  font-size: 18px;
-  line-height: 34px;
-  background-image: url('assets/images/smalldevicepage1.png');
-}
-a.navbar-brand {
-  font-family: "Lobster";
-}
-/* Yashua's css is below */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-/*.app-title{
-  text-align: center;
-}*/
-.body {
-  background-size: 640px 500px; 
+body {
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	color: #505962;
+
 }
 
-.beer-buddy-title{
-    clear: both;
-    text-align: center;
-    font-size: 100px;
-    position: relative;
-    top: 90px;
-  }
-  
-  #intruction-link,
-    #home-link{
-    display: inline;
-    padding-right: 20px;
-  }
-  
-  ul{
-    text-decoration: none;
-    padding: 0;
-  }
-  #intruction-link{
-    position: relative;
-    right: 60px;
-  }
-  #home-link{
-  position: relative;
-  /* when search is display none move  this element over*/
-  left: 79%;
-  }
-  
-  .search-nav-text{
-  position: relative;
-  top: 36px;
-  right:45px;
-  }
-  
-  .search-option {
-    float: right;
-    /* using absolute position will have to fixed to create sticky effect later*/
-    position: relative;
-    top: -85px;
-  }
-  
-  .middle-container{
-    
-    width: 80%;
-    border: 1px solid black;
-    height: 500px;
-    position: absolute;
-    left: 10%;
-  }
-  
-  .title-container{
-    width: 100%;
-    border: 1px solid black;
-  }
-  
-  .search{
-  
-  }
-  
-  .search-text{
-    position: relative;
-    left: 30%; 
-  }
-  
-  
-  #beer-search{
-  position: relative;
-  left: 25%;
-  width: 50%;
-  height: 50px;
-  top: 60px;
-  }
-  
-  .btn{
-  position: relative;
-  left: 45%;
-  width: 10%;
-  top: 80px;
-  }
-  
-  .beer-search-container{
-  width: 80%;
-  position: relative;
-  left: 10%;
-  border: 1px solid black;
-  }
-  
-  .result{
-    position: relative;
-    width: 40%;
-    border-bottom: 1px solid black;
-    left: 
-  }
-  
-  #beer-search-container hide {
-    /*display:none;*/
-  }
+/*--- Nav Scrolling Offset --*/
+.offset:before {
+	height: 62px;
+	margin-top: -62px;
+	content: "";
+	display: block;
+}
 
-#map {
-    height: 400px;  /* The height is 400 pixels */
-    width: 100%;  /* The width is the width of the web page */
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+	padding: 1rem;
+}
+
+/*Nav bar*/
+
+.navbar {
+	padding: .6rem 1rem;
+	text-transform: uppercase;
+	font-size: .9rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	background-color: rgba(57, 63, 70, .9)!important;
+}
+.navbar-brand img {
+	height: 2rem;
+}
+.navbar-nav .nav-link {
+	color: white;
+	padding-top: .8rem;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+	color: #00B3FF;
+}
+.svg-inline--fa.fa-w-14 {
+	color: white;
+	font-size: 1.6rem;
+}
+.navbar-nav li {
+	padding-right: .8rem;
+}
+
+/*Header*/
+.fixed-top  {
+	-webkit-backface-visibility: hidden;
    }
-/*end of Yashua's css*/
+   
+   .home-wrap {
+	 clip: rect(0, auto, auto, 0);
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+   }
+   .home-inner {
+	 position: fixed;
+	 display: table;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-size: cover;
+	 background-position: center center;
+	 -webkit-transform: translateZ(0);
+			 transform: translateZ(0);
+	 will-change: transform;
+   }
 
+.home-inner {
+	background-image: url("../images/beerimage11.jpg");
+}
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 40%;
+	z-index: 1;
+}
+.caption h3 {
+	color: black;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	padding-bottom: 2rem;
+}
+.btn {
+	border-width: medium;
+	border-radius: 0;
+	padding: .5rem 1.1rem;
+	font-size: .9rem;
+	text-transform: uppercase;
+}
+.header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: table;
+	background: #E9ECEF;
+	z-index: -1;
+  }
+/*Main Section*/
+
+.jumbotron {
+	margin-bottom: 0;
+	border-radius: 0;
+	padding: 3rem 0 3rem;
+}
+.narrow {
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 1rem;
+}
+h3.heading {
+	font-size: 1.9rem;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1.9rem;
+}
+.heading-underline {
+	width: 3rem;
+	height: .2rem;
+	background-color: #00B3FF;
+	margin: 0 auto 2rem;
+}
+.about svg.svg-inline--fa {
+	color: #00B3FF;
+	margin: 1rem auto;
+}
+.about h3 {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	padding-bottom: .4rem;
+}
+.about p {
+	font-size: 1.1rem;
+}
+
+/* Display Search Results section */
+
+.card {
+	margin: 0 1rem;
+	border-radius: 0;
+}
+.card-img-top {
+	border-radius: 0;
+}
+.card h4 {
+	font-weight: 700;
+}
+.card h5 {
+	color: #00B3FF;
+}
+.card p {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	margin: 1rem 0 1.5rem;
+}
+
+/*Footer section*/
+
+.footer .row {
+	background-color: rgba(57, 63, 70, .85);
+	padding: 1rem 2rem 3rem;
+	color: white;
+}
+.footer a {
+	color: white;
+}
+
+input.btn {
+	cursor: pointer;
+}
+hr.socket {
+	width: 100%;
+	border-top: .2rem solid #666b71;
+}
+
+/* info for Tanya's media queries for containe's col and rows:
+XS equals less than  576px;
+SM equals between 576px and 768px;
+MD equals between 768px and 992 px;
+LG is between 992 px and 1200px;
+XL is above 1200px;
+*/
+@media (max-width: 768px) {
+	.caption {
+		top: 35%;
+	}
+	.caption h3 {
+		font-size: 1.8rem;
+		padding-bottom: 1.2rem;
+	}
+}
+/* Yashua's CSS for Search Results and Map */
+
+	#beer-search-container hide {
+	  /*display:none;*/
+	}
+  
+  #map {
+	  height: 400px;  /* The height is 400 pixels */
+	  width: 100%;  /* The width is the width of the web page */
+	 }
+  /*end of Yashua's css*/
