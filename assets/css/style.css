@@ -81,6 +81,16 @@ display: block;
     top: 85px;
     left: 42%;
   }
+  .dropdown{
+    position: absolute;
+    left: 80%;
+    top: 289px;
+    border: none;
+    z-index: 11;
+    border-left: 1px solid;
+    height: 30px;
+    color:grey;
+  }
   .search-nav-text{
   position: relative;
   top: 36px;
