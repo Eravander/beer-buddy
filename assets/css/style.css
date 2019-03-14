@@ -3,9 +3,8 @@
 }*/
 body{
   /* background-color: gray; */
-max-width: 1280px;
-max-height: 800px;
-
+max-width: 1366px;
+max-height: 760px;
 }
 
 .beer-buddy-title{
@@ -16,34 +15,44 @@ max-height: 800px;
     top: 90px;
     color: white;
   }
+
+  .nav-bar1{
+    height: 33px;
+  }
+
   .nav-bar2-container{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display: none;
+    height: 55px;
+    
     
   }
 
+ .nav-bar1, .nav-bar2-container{
+  background-color:rgba(53, 49, 49, 0.3);
+  }
 
-.nav-bar2{
-float: left;
-display: block;
+ .nav-bar2{
+ float: left;
+ display: block;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+ }
 
-  #intruction-link,
-    #home-link{
+ #home-link{
+  padding-left: 22px;
+ }
+
+ #intruction-link,
+ #home-link{
     display: inline;
     padding-right: 20px;
-  }
-
-  ul{
-    padding: 0;
-    
+  
   }
 
   .list-one, .list-two , .list-three , .list-three a{
@@ -61,20 +70,39 @@ display: block;
   .beer-link{
     text-decoration: none;
   }
+
   #intruction-link{
     position: relative;
     /* right: 60px; */
   }
+
   #home-link{
   position: relative;
   /* when search is display none move  this element over*/
   /* left: 79%; */
   }
-  
+
+  #primary-search{
+    position: relative;
+    top: 85px;
+    left: 42%;
+  }
+
+  .dropdown{
+    position: absolute;
+    left: 70%;
+    top: 289px;
+    border: none;
+    z-index: 11;
+    border-left: 1px solid;
+    height: 30px;
+    color:grey;
+  }
+
   .search-nav-text{
-  position: relative;
-  top: 36px;
-  right:45px;
+   position: relative;
+   top: 36px;
+   right:45px;
   }
   
   .search-option {
@@ -83,16 +111,37 @@ display: block;
     /* using absolute position will have to fixed to create sticky effect later*/
     position: relative;
     
-    top: -85px;
+    bottom: 100px;
   }
-  #beer-nav-search{
-    width: 80%;
+  .beer-nav-search{
+    border: none;
+    position: relative;
+    height: 30px;
+    width: 190px;
+    right: 20px;
   }
+  .round-two{
+   position: absolute;
+   top: 25px;
+   right: 50px;
+   width: 200px;
+  }
+  
   .round {
-    width: 100%;
+    width: 90%;
+  }
+  .round-two, .round {
+    
     border-radius: 30px;
     padding: 5px 5px 5px 25px;
     z-index: 10;
+    background-color: white; 
+    
+}
+#search-button{
+  position: absolute;
+  right: 253px;
+  top: 28px;
 }
   
   .middle-container{
@@ -109,14 +158,12 @@ display: block;
     border: 1px solid black;
   }
   
-  .search{
-  
-  }
+
   
   .search-nav-text{
     color: white;
     position: relative;
-     bottom: 5px;
+    bottom: 5px;
     
   }
 
@@ -127,20 +174,11 @@ display: block;
   
   
   #beer-search{
-  
   position: relative;
-  left: 25%;
+  left: 20%;
   width: 50em;
   height: 50px;
-  top: 60px;
-  }
-  
-  .btn{
-  position: relative;
-  left: 45%;
-  width: 10%;
   top: 80px;
-  z-index: 5;
   }
   
   .beer-search-container{
@@ -149,7 +187,6 @@ display: block;
   height: 500px ;
   position: relative;
   left:5%;
-  
   background-color:rgba(155, 145, 145, 0.3);
   
   /*add all classes that need to not be displayed to hide class*/
@@ -165,16 +202,15 @@ display: block;
   
   .hide{
     /*display:none;*/
-
-
-
   }
+
   .beer-link{
     position: relative;
     left: 2px;
     top: 10px;
     font-size: 30px;
   }
+
   .beer-name{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -182,14 +218,16 @@ display: block;
     position: relative;
     left: 25px;
   }
+
 .zip2{
   position: relative;
   width: 60px;
   left: 68%;
-  top: -25px;
+  top: -38px;
   border: none;
  border-left: 1px solid gray;
 }
+
   .zip{
     position: relative;
     left: 50px;
@@ -200,7 +238,6 @@ display: block;
     border-left: 1px solid gray;
   }
   
-  
 #map {
     height: 400px;  /* The height is 400 pixels */
     width: 500px;  /* The width is the width of the web page */
@@ -208,6 +245,46 @@ display: block;
     left: 60%;
     position: absolute;
     overflow: hidden;
-    
     bottom: 90px;
    }
+
+   @media only screen and (max-width: 980px){
+    #beer-search{left: 11%;}
+    .round-two{right: 27px;}
+    #map{left: 57%; width: 400px;}
+
+   }
+
+
+   @media only screen and (max-width: 768px){
+    #beer-search{left: 5%;width: 43em}
+    .beer-buddy-title{left: 11px;}
+    .round-two{right: 117px;}
+    .beer-search-container{width: 45%;left: 3%;}
+    .link-container{width: 800px;}
+    .nav-bar2-container{width: 859px;}
+    #map{left: 49%;width: 368px; height: 360px; bottom: 151px;}
+    #primary-search{left: 38%;}
+    #search-button {right: 321px }
+    .dropdown{width: 180px;}
+   }
+  
+    
+  
+  
+  @media only screen and (max-width: 640px){
+   .beer-buddy-title{left: 11px;}
+   #beer-search{width: 35em;}
+   #primar-search{left: 50%}
+   .nav-bar2-container{width: 802px;}
+   .beer-search-container{width: 39%;left: 5%}
+   .dropdown{width: 148px;}
+   .beer-nav-search{left:0 ; width: 170px;}
+   .round-two{right: 5px;}
+   #search-button{right: 397px;}
+   .beer-name{left: 14px;}
+   #map{width: 312px; left: 46%;}
+   .round-two{right: 194px;}
+   #buddy{left: 11px}
+  }
+  

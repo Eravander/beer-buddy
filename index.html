@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tanya added Bootstrap CSS -->
-  //
+  
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -22,21 +22,36 @@
 </head>
 
 <body background="assets\images\beerimage11.jpg" style="background-size: 1366px 768px">
-  <ul class="nav-bar2-container">
-    <li class="nav-bar2"><a class="active" href="#home">
-        <h1 id="buddy">Beer Buddy</h1>
-      </a></li>
-    <li class="nav-bar2"><a href="#home">Home</a></li>
-    <li class="nav-bar2"><a href="#news">How the app works</a></li>
-    <li class="nav-bar2"><a href="#about">About Team</a></li>
-  </ul>
+  
 
 
 
   <div class="main-container">
 
+      <ul class="nav-bar2-container">
+          <div class="search-option hide">
+              <label for="search" class="search-nav-text">
+             
+              </label>
+              <!--put search button-->
+              <div class="round-two" >
+                  <input type="text" class="form-control beer-nav-search "  placeholder="Search Your Fav Beer">
+              </div>
+              
+              
+              <button id="search-button" type="submit" class="btn btn-secondary ">Search</button>
+            </div>
+
+          <li class="nav-bar2"><a class="active" href="#home">
+              <h1 id="buddy">Beer Buddy</h1>
+            </a></li>
+          <li class="nav-bar2"><a href="#home">Home</a></li>
+          <li class="nav-bar2"><a href="#news">How the app works</a></li>
+          <li class="nav-bar2"><a href="#about">About Team</a></li>
+        </ul>
+
     <div class="link-container">
-      <ul>
+      <ul class="nav-bar1">
         <li id="home-link"><a href="#home">Home</a></li>
         <!--<li id="about"><a href="#about">About the team</a></li> -->
         <li id="intruction-link"><a href="#news">How the app works</a></li>
@@ -44,16 +59,7 @@
 
     </div>
 
-    <div class="search-option hide">
-      <label for="search">
-        <p class="search-nav-text">Search</p>
-      </label>
-      <!--put search button-->
-      <input type="text" class="form-control round" id="beer-nav-search" placeholder="Search Your Fav Beer">
-      <input type="text" class="form-control zip2" placeholder="Zip Code" title="Please enter a Zip Code"
-        pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$">
-      <button id="search-button" type="submit" class="btn btn-primary ">Search</button>
-    </div>
+    
 
 
     <h1 class="beer-buddy-title">Beer Buddy</h1>
@@ -64,10 +70,15 @@
           <h2 class="search-text"></h2>
         </label>
         <input type="text" class="form-control round" id="beer-search" placeholder="Search Your Favorite Beer">
-        <input type="text" class="form-control zip" placeholder="Zip Code" title="Please enter a Zip Code"
-          pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$">
+        <select class="dropdown">
+          <option value="brewery">Brewery</option>
+          <option value="zipcode">Zip Code</option>
+          <option value="beer">Beer Name</option>
+
+        </select>
+      <!--<input type="text"  class="form-control zip" placeholder="Zip Code" title="Please enter a Zip Code" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$">-->  
       </div>
-      <button id="primary-search" type="submit" class="btn btn-primary ">Find My Beer Now!</button>
+      <button id="primary-search" type="submit" class="btn btn-secondary ">Find My Beer Now!</button>
     </form>
     <div class="beer-search-container hide">
 
