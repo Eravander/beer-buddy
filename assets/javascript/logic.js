@@ -320,20 +320,6 @@ function callRandom() {
   // callRandom();
 
 
-  // Old map code TODO: Delete or rewrite based on Johns research
 
 
-// Initialize and add the map
-// function initMap() {
-//   // The location of charlotte
-//   var breweryMapData = {lat: brewLat, lng: brewLng};
-//   // The map, centered at charlotte
-//   var map = new google.maps.Map(
-//       document.getElementById('map'), {zoom: 10, center: breweryMapData});
-//   // The marker, positioned at breweryMapData
-//   var marker = new google.maps.Marker({
-//     position: breweryMapData,
-//      map: map
-//     });
-// }
 
