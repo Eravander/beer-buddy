@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-$(document).ready(function(){
+
 
   
   // Initialize and add the map
@@ -109,12 +108,9 @@ var directions = "directions"
     
   
   }
-})
 
-=======
 //TODO: reconcile variable names for functions and displays
 //TODO: Link variable information
->>>>>>> 7092226496dd7b08d18204b9fa5a095e7f29289e
 
 // variable names
 var beerName;
