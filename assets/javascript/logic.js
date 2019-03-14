@@ -30,16 +30,14 @@ var directions = "directions"
    $(".search-option ").css({display:"block"})
    $(".nav-bar2-container").css({display:"block"})
    $(".link-container").css({display:"none"})
-   $(".search-option ").css({top:"-165px"})
+   $(".search-option ").css({top:"-20px"})
    $("#buddy").css({position:"relative"})
-   $("#buddy").css({top:"-30px"})
+   $("#buddy").css({top:"-14px"})
    $("#map").css({display:"block"})
    $(".zip").css({display:"none"})
 // turn this into a function  out side of the scope the  click then place the function in click
 
     pageTwo()
-
-
   })
 
 

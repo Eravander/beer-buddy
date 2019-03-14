@@ -3,8 +3,8 @@
 }*/
 body{
   /* background-color: gray; */
-max-width: 1280px;
-max-height: 800px;
+max-width: 1366px;
+max-height: 760px;
 
 }
 
@@ -16,15 +16,22 @@ max-height: 800px;
     top: 90px;
     color: white;
   }
+  .nav-bar1{
+    height: 33px;
+  }
   .nav-bar2-container{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display: none;
+    height: 55px;
+    
     
   }
-
+  .nav-bar1, .nav-bar2-container{
+    background-color:rgba(53, 49, 49, 0.3);
+  }
 
 .nav-bar2{
 float: left;
@@ -34,17 +41,16 @@ display: block;
   padding: 14px 16px;
   text-decoration: none;
 }
-
+#home-link{
+  padding-left: 22px;
+}
   #intruction-link,
     #home-link{
     display: inline;
     padding-right: 20px;
+  
   }
 
-  ul{
-    padding: 0;
-    
-  }
 
   .list-one, .list-two , .list-three , .list-three a{
     text-decoration: none;
@@ -70,7 +76,11 @@ display: block;
   /* when search is display none move  this element over*/
   /* left: 79%; */
   }
-  
+  #primary-search{
+    position: relative;
+    top: 85px;
+    left: 42%;
+  }
   .search-nav-text{
   position: relative;
   top: 36px;
@@ -83,16 +93,37 @@ display: block;
     /* using absolute position will have to fixed to create sticky effect later*/
     position: relative;
     
-    top: -85px;
+    bottom: 100px;
   }
-  #beer-nav-search{
-    width: 80%;
+  .beer-nav-search{
+    border: none;
+    position: relative;
+    height: 30px;
+    width: 190px;
+    right: 20px;
   }
+  .round-two{
+   position: absolute;
+  top: 25px;
+  right: 50px;
+  width: 200px;
+  }
+  
   .round {
-    width: 100%;
+    width: 90%;
+  }
+  .round-two, .round {
+    
     border-radius: 30px;
     padding: 5px 5px 5px 25px;
     z-index: 10;
+    background-color: white; 
+    
+}
+#search-button{
+  position: absolute;
+  right: 253px;
+  top: 28px;
 }
   
   .middle-container{
@@ -109,9 +140,7 @@ display: block;
     border: 1px solid black;
   }
   
-  .search{
-  
-  }
+
   
   .search-nav-text{
     color: white;
@@ -129,19 +158,13 @@ display: block;
   #beer-search{
   
   position: relative;
-  left: 25%;
+  left: 20%;
   width: 50em;
   height: 50px;
-  top: 60px;
+  top: 80px;
   }
   
-  .btn{
-  position: relative;
-  left: 45%;
-  width: 10%;
-  top: 80px;
-  z-index: 5;
-  }
+  
   
   .beer-search-container{
   display: none;
@@ -186,7 +209,7 @@ display: block;
   position: relative;
   width: 60px;
   left: 68%;
-  top: -25px;
+  top: -38px;
   border: none;
  border-left: 1px solid gray;
 }
