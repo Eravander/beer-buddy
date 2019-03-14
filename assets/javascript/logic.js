@@ -3,8 +3,6 @@ var beerName;
 var breweryName;
 var brewLat;
 var brewLng;
-var coords = [];
-var breweryArray = [];
 var glassware;
 var abv;
 var style;
@@ -26,7 +24,7 @@ $.ajax({
   url: queryURL,
   method: "GET",
   data: {
-    q: "Hop drop and roll",
+    q: search,
     type: "beer",
     withBreweries: "Y",
     withLocations: "Y",
@@ -36,7 +34,7 @@ $.ajax({
   console.log(response)
   var result = response.data;
   
-  for (var i = 0; i <= 0; i++){
+  for (var i = 0; i < 10; i++){
     beerName = result[i].name;
     breweryName = result[i].breweries[0].name;
     brewLat = result[i].breweries[0].locations[0].latitude;
@@ -53,10 +51,6 @@ $.ajax({
 
   };
 
-  //TODO: move the below comment to where we want to call the beer search function
-  // callBeer();
-
-
   //This function takes a postal code and returns breweries within a 10 mile radius
   function callLocation() {
   
@@ -67,7 +61,7 @@ $.ajax({
     url: queryURL,
     method: "GET",
     data: {
-      postalCode: "28217",
+      postalCode: search,
       key: config,
     } 
   }).then(function (response) {
@@ -94,10 +88,6 @@ $.ajax({
     });
   
     };
-
-    //TODO: place this where we want the location function to be called.
-    // callLocation();
-
 
     //This function calls a random beer, then stores its name as a variable to run through the GET beer search function
   function callRandom (){
@@ -150,6 +140,13 @@ $.ajax({
 
   };
 
+
+  //TODO: place this where we want the location function to be called.
+   // callLocation();
+
+  //TODO: move the below comment to where we want to call the beer search function
+  // callBeer();
+
   //TODO: Place this on a random beer search button
   // callRandom();
 
@@ -157,17 +154,3 @@ $.ajax({
   // Old map code TODO: Delete or rewrite based on Johns research
 
   
-// Initialize and add the map
-// function initMap() {
-//   // The location of charlotte
-//   var breweryMapData = {lat: brewLat, lng: brewLng};
-//   // The map, centered at charlotte
-//   var map = new google.maps.Map(
-//       document.getElementById('map'), {zoom: 10, center: breweryMapData});
-//   // The marker, positioned at breweryMapData
-//   var marker = new google.maps.Marker({
-//     position: breweryMapData,
-//      map: map
-//     });
-// }
-
