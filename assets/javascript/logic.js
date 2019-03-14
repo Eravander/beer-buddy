@@ -35,6 +35,7 @@ var directions = "directions"
    $("#buddy").css({top:"-14px"})
    $("#map").css({display:"block"})
    $(".zip").css({display:"none"})
+   $(".dropdown").css({display:"none"})
 // turn this into a function  out side of the scope the  click then place the function in click
 
     pageTwo()
