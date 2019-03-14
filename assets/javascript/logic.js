@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 $(document).ready(function(){
 
   
@@ -113,7 +110,7 @@ var directions = "directions"
   
   }
 })
->>>>>>> 298474231e673294ed1378930ebea70ad2cbd75e
+
 
 // variable names
 var beerName;
