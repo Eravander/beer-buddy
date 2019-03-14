@@ -43,23 +43,11 @@ display: block;
 
   ul{
     padding: 0;
-    
   }
-
-  .list-one, .list-two , .list-three , .list-three a{
-    text-decoration: none;
-    color: #000;
-    list-style: none;
-  }
-
   li a{
     text-decoration: none;
     color: white;
     
-  }
-
-  .beer-link{
-    text-decoration: none;
   }
   #intruction-link{
     position: relative;
@@ -92,7 +80,8 @@ display: block;
     width: 100%;
     border-radius: 30px;
     padding: 5px 5px 5px 25px;
-    z-index: 10;
+    
+    z-index: 5;
 }
   
   .middle-container{
@@ -113,13 +102,6 @@ display: block;
   
   }
   
-  .search-nav-text{
-    color: white;
-    position: relative;
-     bottom: 5px;
-    
-  }
-
   .search-text{
     position: relative;
     left: 30%; 
@@ -145,13 +127,11 @@ display: block;
   
   .beer-search-container{
   display: none;
-  width: 50%;
-  height: 500px ;
+  width: 80%;
+  height: 100px ;
   position: relative;
-  left:5%;
-  
-  background-color:rgba(155, 145, 145, 0.3);
-  
+  left: 10%;
+  border: 1px solid black;
   /*add all classes that need to not be displayed to hide class*/
   /*display: none;
   }
@@ -165,49 +145,14 @@ display: block;
   
   .hide{
     /*display:none;*/
+  }
+  .map-container{
 
-
-
   }
-  .beer-link{
-    position: relative;
-    left: 2px;
-    top: 10px;
-    font-size: 30px;
-  }
-  .beer-name{
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    width:90%; 
-    position: relative;
-    left: 25px;
-  }
-.zip2{
-  position: relative;
-  width: 60px;
-  left: 68%;
-  top: -25px;
-  border: none;
- border-left: 1px solid gray;
-}
-  .zip{
-    position: relative;
-    left: 50px;
-    top: 60px;
-    z-index: 10;
-    height: 50px;
-    border: none;
-    border-left: 1px solid gray;
-  }
-  
   
 #map {
-    height: 400px;  /* The height is 400 pixels */
-    width: 500px;  /* The width is the width of the web page */
-    display: none;
-    left: 60%;
     position: absolute;
-    overflow: hidden;
-    
-    bottom: 90px;
+    bottom: -500px;
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
    }
