@@ -31,22 +31,22 @@ max-height: 760px;
     
   }
 
-  .nav-bar1, .nav-bar2-container{
-    background-color:rgba(53, 49, 49, 0.3);
+ .nav-bar1, .nav-bar2-container{
+  background-color:rgba(53, 49, 49, 0.3);
   }
 
-.nav-bar2{
-float: left;
-display: block;
+ .nav-bar2{
+ float: left;
+ display: block;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+ }
 
-#home-link{
+ #home-link{
   padding-left: 22px;
-}
+ }
 
  #intruction-link,
  #home-link{
@@ -100,9 +100,9 @@ display: block;
   }
 
   .search-nav-text{
-  position: relative;
-  top: 36px;
-  right:45px;
+   position: relative;
+   top: 36px;
+   right:45px;
   }
   
   .search-option {
@@ -122,9 +122,9 @@ display: block;
   }
   .round-two{
    position: absolute;
-  top: 25px;
-  right: 50px;
-  width: 200px;
+   top: 25px;
+   right: 50px;
+   width: 200px;
   }
   
   .round {
@@ -163,7 +163,7 @@ display: block;
   .search-nav-text{
     color: white;
     position: relative;
-     bottom: 5px;
+    bottom: 5px;
     
   }
 
