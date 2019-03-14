@@ -191,8 +191,6 @@ $("#primary-search").click(function () {
   $(".zip").css({ display: "none" })
 })
 
-
-
 function pageTwo() {
   //TODO: ENsure this creates 10 cards as per For loop callback
   //TODO: Only one link to var website
