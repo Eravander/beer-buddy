@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function(){
 
   
@@ -110,14 +111,16 @@ var directions = "directions"
   }
 })
 
+=======
+//TODO: reconcile variable names for functions and displays
+//TODO: Link variable information
+>>>>>>> 7092226496dd7b08d18204b9fa5a095e7f29289e
 
 // variable names
 var beerName;
 var breweryName;
 var brewLat;
 var brewLng;
-var coords = [];
-var breweryArray = [];
 var glassware;
 var abv;
 var style;
@@ -126,10 +129,7 @@ var website;
 var breweryAddress;
 var breweryOpen
 var breweryRegion
-
-
 //TODO: create a dropdown or other selector to determine which below function to run
-
 
 // Initialize and add the map
 function initMap() {
@@ -142,8 +142,6 @@ function initMap() {
     document.getElementById('map'), { zoom: 3.5, center: breweryMapData });
 
 }
-
-
 
 // this function will search for and return information on a beer entered
 function callBeer() {
@@ -172,7 +170,7 @@ function callBeer() {
       });
 
 
-    for (var i = 0; i <= 0; i++) {
+    for (var i = 0; i < 10; i++) {
       beerName = result[i].name;
       breweryName = result[i].breweries[0].name;
       brewLat = result[i].breweries[0].locations[0].latitude;
@@ -183,29 +181,14 @@ function callBeer() {
       website = result[i].breweries[0].website;
       //placed new markers
       var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
-
+      //TODO: Dynamically create display card 
+      pageTwo();
     }
 
   });
 
 };
 
-//TODO: move the below comment to where we want to call the beer search function
-// callBeer();
-
-
-
-// Initialize and add the map for new function
-function initMap() {
-  console.log("Homey!");
-
-  // The location of kansas
-  var breweryMapData = { lat: 39.0119, lng: -98.4842 };
-  // The map, centered at kansas
-  var map = new google.maps.Map(
-    document.getElementById('map'), { zoom: 3.5, center: breweryMapData });
-
-}
 //This function takes a postal code and returns breweries within a 10 mile radius
 function callLocation() {
 
@@ -240,29 +223,14 @@ function callLocation() {
       } else {
         console.log("Closed: " + breweryName)
       }
-      
+
     }
 
   });
 
 };
 
-//TODO: place this where we want the location function to be called.
-// callLocation();
 
-
-
-// Initialize and add the map for new function
-function initMap() {
-  console.log("Dude!");
-
-  // The location of kansas
-  var breweryMapData = { lat: 39.0119, lng: -98.4842 };
-  // The map, centered at kansas
-  var map = new google.maps.Map(
-    document.getElementById('map'), { zoom: 3.5, center: breweryMapData });
-
-}
 //This function calls a random beer, then stores its name as a variable to run through the GET beer search function
 function callRandom() {
   var queryURL = "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/beer/random";
@@ -315,10 +283,82 @@ function callRandom() {
 
 };
 
-  //TODO: Place this on a random beer search button
-  // callRandom();
+var beer = "Ale"
+var brewery = "Brewery"
+var directions = "directions"
+
+$("#primary-search").click(function () {
+  event.preventDefault()
+  //TODO: Input verification
+  //TODO: create attribute or value to differentiate between zip code entry and beer entry
+
+  if (createdAttribute === "beer") {
+    callBeer();
+  } else if (createdAttribute === "zip") {
+    callLocation();
+  }
+
+  //TODO: Ensure the below code dynamically creates what we want
+  $(".beer-search-container").css({ display: "block" })
+  $(".beer-buddy-title").css({ display: "none" })
+  $("#beer-search").css({ display: "none" })
+  $("#primary-search").css({ display: "none" })
+  $(".search-option ").css({ display: "block" })
+  $(".nav-bar2-container").css({ display: "block" })
+  $(".link-container").css({ display: "none" })
+  $(".search-option ").css({ top: "-165px" })
+  $("#buddy").css({ position: "relative" })
+  $("#buddy").css({ top: "-30px" })
+  $("#map").css({ display: "block" })
+  $(".zip").css({ display: "none" })
+})
 
 
 
+function pageTwo() {
+  //TODO: ENsure this creates 10 cards as per For loop callback
+  //TODO: Only one link to var website
+
+  $(".beer-search-container").html($("<div>", { class: "result" }))
+  $(".result").html($("<img>", { class: "beer-image" }))
+  $(".beer-image").after($("<div>", { class: "beer-name" }))
+  //anchor tags are missing links
 
 
+  var link = $("<a>");
+  link.attr("href", "#beer");
+  link.text(beer);
+  link.addClass("beer-link");
+
+
+
+  $(".beer-name").html(link);
+  $(".beer-link").after($("<ul>", { class: "list" }))
+
+
+
+  var li = $("<li>");
+  li.text(brewery)
+  li.addClass("list-one");
+  $(".list").html(li)
+
+  var li2 = $("<li>");
+  li2.text(brewery)
+  li2.addClass("list-two");
+  $(".list-one").after(li2)
+
+  var li3 = $("<li>");
+  li3.text(brewery)
+  li3.addClass("list-three");
+  $(".list-two").after(li3)
+
+  var link2 = $("<a>");
+  link2.attr("href", directions);
+  link2.text(directions);
+
+  $(".list-three").html(link2);
+}
+
+
+//TODO: Create on click event for user to get random beer
+//Submit button "on click" callRandom();
