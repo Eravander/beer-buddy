@@ -1,6 +1,3 @@
-//TODO: reconcile variable names for functions and displays
-//TODO: Link variable information
-
 // variable names
 var beerName;
 var breweryName;
@@ -168,10 +165,6 @@ function callRandom() {
 
 };
 
-var beer = "Ale"
-var brewery = "Brewery"
-var directions = "directions"
-
 $("#primary-search").click(function () {
   event.preventDefault()
   //TODO: Input verification
@@ -212,7 +205,7 @@ function pageTwo() {
 
   var link = $("<a>");
   link.attr("href", "#beer");
-  link.text(beer);
+  link.text(beerName);
   link.addClass("beer-link");
 
 
@@ -223,23 +216,38 @@ function pageTwo() {
 
 
   var li = $("<li>");
-  li.text(brewery)
+  li.text(breweryName)
   li.addClass("list-one");
   $(".list").html(li)
 
   var li2 = $("<li>");
-  li2.text(brewery)
+  li2.text(abv)
   li2.addClass("list-two");
   $(".list-one").after(li2)
 
   var li3 = $("<li>");
-  li3.text(brewery)
+  li3.text(ibu)
   li3.addClass("list-three");
   $(".list-two").after(li3)
 
+  var li4 = $("<li>");
+  li4.text(style)
+  li4.addClass("list-three");
+  $(".list-two").after(li4)
+
+  var li5 = $("<li>");
+  li5.text(breweryAddress)
+  li5.addClass("list-three");
+  $(".list-two").after(li5)
+
+  var li6 = $("<li>");
+  li6.text(breweryRegion)
+  li6.addClass("list-three");
+  $(".list-two").after(li6)
+
   var link2 = $("<a>");
-  link2.attr("href", directions);
-  link2.text(directions);
+  link2.attr("href", website);
+  link2.text(website);
 
   $(".list-three").html(link2);
 }
