@@ -99,12 +99,15 @@ function callLocation() {
       breweryRegion = result[i].region
       //new markers added
       var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
+      pageTwo();
 
-      if (breweryOpen === "Y") {
-        console.log("Open: " + breweryName)
-      } else {
-        console.log("Closed: " + breweryName)
-      }
+      // if (breweryOpen === "Y") {
+      //   console.log("Open: " + breweryName)
+      //   var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
+      //   pageTwo();
+      // } else {
+      //   console.log("Closed: " + breweryName)
+      // }
 
     }
 
@@ -156,7 +159,7 @@ function callRandom() {
         website = result[i].breweries[0].website;
         //new markers added
         var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
-
+        pageTwo();
       }
 
     });
@@ -169,11 +172,17 @@ $("#primary-search").click(function () {
   event.preventDefault()
   //TODO: Input verification
   //TODO: create attribute or value to differentiate between zip code entry and beer entry
+  var searchParameter = $('.dropdown').val();
 
-  if (createdAttribute === "beer") {
+  if (searchParameter === "random") {
+    callRandom();
+    console.log(searchParameter)
+  } else if (searchParameter === "beer") {
     callBeer();
-  } else if (createdAttribute === "zip") {
+    console.log(searchParameter)
+  } else if (searchParameter === "zip-code") {
     callLocation();
+    console.log(searchParameter)
   }
 
   //TODO: Ensure the below code dynamically creates what we want
@@ -219,7 +228,7 @@ function pageTwo() {
   $(".list").html(li)
 
   var li2 = $("<li>");
-  li2.text(abv)
+  li2.text("ABV: " + abv)
   li2.addClass("list-two");
   $(".list-one").after(li2)
 
@@ -230,18 +239,18 @@ function pageTwo() {
 
   var li4 = $("<li>");
   li4.text(style)
-  li4.addClass("list-three");
-  $(".list-two").after(li4)
+  li4.addClass("list-four");
+  $(".list-three").after(li4)
 
   var li5 = $("<li>");
   li5.text(breweryAddress)
-  li5.addClass("list-three");
-  $(".list-two").after(li5)
+  li5.addClass("list-five");
+  $(".list-four").after(li5)
 
   var li6 = $("<li>");
   li6.text(breweryRegion)
-  li6.addClass("list-three");
-  $(".list-two").after(li6)
+  li6.addClass("list-six");
+  $(".list-five").after(li6)
 
   var link2 = $("<a>");
   link2.attr("href", website);
@@ -250,6 +259,3 @@ function pageTwo() {
   $(".list-three").html(link2);
 }
 
-
-//TODO: Create on click event for user to get random beer
-//Submit button "on click" callRandom();
