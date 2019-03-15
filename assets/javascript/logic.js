@@ -186,18 +186,19 @@ $("#primary-search").click(function () {
   }
 
   //TODO: Ensure the below code dynamically creates what we want
-  $(".beer-search-container").css({ display: "block" })
-  $(".beer-buddy-title").css({ display: "none" })
-  $("#beer-search").css({ display: "none" })
-  $("#primary-search").css({ display: "none" })
-  $(".search-option ").css({ display: "block" })
-  $(".nav-bar2-container").css({ display: "block" })
-  $(".link-container").css({ display: "none" })
-  $(".search-option ").css({ top: "-165px" })
-  $("#buddy").css({ position: "relative" })
-  $("#buddy").css({ top: "-30px" })
-  $("#map").css({ display: "block" })
-  $(".zip").css({ display: "none" })
+  $(".beer-search-container").css({display:"block"})
+  $(".beer-buddy-title").css({display:"none"})
+  $("#beer-search").css({display:"none"})
+  $("#primary-search").css({display:"none"})
+  $(".search-option ").css({display:"block"})
+  $(".nav-bar2-container").css({display:"block"})
+  $(".link-container").css({display:"none"})
+  $(".search-option ").css({top:"-20px"})
+  $("#buddy").css({position:"relative"})
+  $("#buddy").css({top:"-14px"})
+  $("#map").css({display:"block"})
+  $(".zip").css({display:"none"})
+  $(".dropdown").css({display:"none"})
 })
 
 function pageTwo() {
