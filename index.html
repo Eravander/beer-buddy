@@ -23,9 +23,6 @@
 
 <body background="assets\images\Webp.net-compress-image.jpg" style="background-size: 1366px 768px">
 
-
-
-
   <div class="main-container">
 
     <ul class="nav-bar2-container">
@@ -35,9 +32,14 @@
         </label>
         <!--put search button-->
         <div class="round-two">
-          <input type="text" class="form-control beer-nav-search " placeholder="Search Your Fav Beer">
+          <input type="text" class="form-control beer-nav-search " placeholder="Search Beer">
         </div>
+        <select class="dropdown-two">
+          <option value="random">Random</option>
+          <option value="zip-code">Zip Code</option>
+          <option value="beer">Beer Name</option>
 
+        </select>
 
         <button id="search-button" type="submit" class="btn btn-secondary ">Search</button>
       </div>
@@ -53,14 +55,10 @@
     <div class="link-container">
       <ul class="nav-bar1">
         <li id="home-link"><a href="index.html">Home</a></li>
-        <!--<li id="about"><a href="#about">About the team</a></li> -->
-       <!--<li id="intruction-link"><a href="#news">How the app works</a></li>--> 
+        <li id="about"><a href="https://trello.com/b/kfnJxsnE/beerbuddy-work">About the team</a></li>
+        <li id="intruction-link"><a href="#news">How the app works</a></li>
       </ul>
-
     </div>
-
-
-
 
     <h1 class="beer-buddy-title">Beer Buddy</h1>
 
@@ -80,7 +78,7 @@
       </div>
       <button id="primary-search" type="submit" class="btn btn-secondary ">Find My Beer Now!</button>
     </form>
-    <div class="beer-search-container hide">
+    <div class="beer-search-container hide" id="results">
 
       <!--
          <div class="result">
@@ -101,13 +99,13 @@
     <div id="map"></div>
 
   </div>
-
-
-  <script src="assets\javascript\config.js"></script>
-  
+  <script type="text/javascript" id="AgeVerifyScript" data-template="hops" data-age="21" data-method="MDY"
+  data-cookielength="30" data-prompttextdob="Welcome!<br /><br />You must be 21 to enter" data-yytext="YYYY"
+  data-mmtext="MM" data-ddtext="DD" data-underageredirect="https://www.cartoonnetwork.com/"
+  src="https://av.ageverify.co/jsv6/dob.js"></script>
+  <script src="assets/javascript/config.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <script src="assets/javascript/logic.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -115,7 +113,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
- 
+  <script src="assets\javascript\logic.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
     </script>
