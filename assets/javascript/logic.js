@@ -1,6 +1,6 @@
 // variable names
-var map;
 var marker;
+var map;
 var beerName;
 var breweryName;
 var brewLat;
@@ -47,14 +47,14 @@ function callBeer() {
     console.log(response)
     var result = response.data;
     var coords = { lat: result[0].breweries[0].locations[0].latitude, lng: result[0].breweries[0].locations[0].longitude };
-    var map = new google.maps.Map(
+    map = new google.maps.Map(
       document.getElementById('map'), {
         zoom: 3.5,
         center: coords
       });
 
 
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 10; i++) {
       beerName = result[i].name;
       breweryName = result[i].breweries[0].name;
       brewLat = result[i].breweries[0].locations[0].latitude;
@@ -64,11 +64,7 @@ function callBeer() {
       ibu = result[i].ibu;
       website = result[i].breweries[0].website;
       //placed new markers
-      marker = new google.maps.Marker({
-        position: { lat: brewLat, lng: brewLng },
-        map: map,
-        content: breweryName,
-      });
+      marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
       //TODO: Dynamically create display card 
       pageTwo();
     }
@@ -209,13 +205,17 @@ $("#primary-search").click(function () {
   $(".search-option ").css({ display: "block" })
   $(".nav-bar2-container").css({ display: "block" })
   $(".link-container").css({ display: "none" })
-  $(".search-option ").css({ top: "-20px" })
+  $(".search-option ").css({ top: "-165px" })
   $("#buddy").css({ position: "relative" })
-  $("#buddy").css({ top: "-14px" })
+  $("#buddy").css({ top: "-30px" })
   $("#map").css({ display: "block" })
   $(".zip").css({ display: "none" })
+<<<<<<< HEAD
   $(".dropdown").css({ display: "none" })
 });
+=======
+})
+>>>>>>> 8fd86a8c32bcc2b4b0d5189cb7a304bfb849cb0c
 
 function pageTwo() {
   //TODO: ENsure this creates 10 cards as per For loop callback
