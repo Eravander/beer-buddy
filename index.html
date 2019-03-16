@@ -17,11 +17,11 @@
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets\css\style.css">
   <title>Beer Buddy</title>
 </head>
 
-<body background="assets\images\beerimage11.jpg" style="background-size: 1366px 768px">
+<body background="assets\images\Webp.net-compress-image.jpg" style="background-size: 1366px 768px">
 
   <div class="main-container">
 
@@ -39,19 +39,19 @@
         <button id="search-button" type="submit" class="btn btn-secondary ">Search</button>
       </div>
 
-      <li class="nav-bar2"><a class="active" href="#home">
+      <li class="nav-bar2"><a class="active" href="index.html">
           <h1 id="buddy">Beer Buddy</h1>
         </a></li>
-      <li class="nav-bar2"><a href="#home">Home</a></li>
-      <li class="nav-bar2"><a href="#news">How the app works</a></li>
-      <li class="nav-bar2"><a href="#about">About Team</a></li>
+      <li class="nav-bar2"><a href="index.html">Home</a></li>
+      <!--<li class="nav-bar2"><a href="#news">How the app works</a></li>-->
+      <!--<li class="nav-bar2"><a href="#about">About Team</a></li>-->
     </ul>
 
     <div class="link-container">
       <ul class="nav-bar1">
-        <li id="home-link"><a href="#home">Home</a></li>
+        <li id="home-link"><a href="index.html">Home</a></li>
         <!--<li id="about"><a href="#about">About the team</a></li> -->
-        <li id="intruction-link"><a href="#news">How the app works</a></li>
+       <!--<li id="intruction-link"><a href="#news">How the app works</a></li>--> 
       </ul>
 
     </div>
@@ -63,7 +63,7 @@
         <label for="search">
           <h2 class="search-text"></h2>
         </label>
-        <input type="text" class="form-control round" id="beer-search" placeholder="Search Your Favorite Beer">
+        <input type="text" class="form-control round" id="beer-search" placeholder="Search Your Favorite Beer"  >
         <select class="dropdown">
           <option value="random">Random</option>
           <option value="zip-code">Zip Code</option>
@@ -86,17 +86,20 @@
            <li>beer :</li>
            <li><a href="#directions">Directions</a></li>
   
-         </ol>-->
+         </ol>
 
-    </div>
+    </div>-->
     <!--The div element for the map -->
+
+  </div>
     <div id="map"></div>
 
   </div>
 
 
-  <script src="assets/javascript/config.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="assets\javascript\config.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -105,7 +108,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
-  <script src="assets/javascript/logic.js"></script>
+ 
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
     </script>

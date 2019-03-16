@@ -13,6 +13,8 @@ var website;
 var breweryAddress;
 var breweryOpen
 var breweryRegion
+
+
 //TODO: create a dropdown or other selector to determine which below function to run
 
 // Initialize and add the map
@@ -113,6 +115,7 @@ function callLocation() {
       // beerDiv.append(breweryAddress);
       // beerDiv.append(breweryWebsite);
 
+
       // if (breweryOpen === "Y") {
       //   console.log("Open: " + breweryName)
       //   marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
@@ -171,7 +174,7 @@ function callRandom() {
         website = result[i].breweries[0].website;
         //new markers added
         marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
-        pageTwo();
+       // pageTwo();
       }
 
     });
@@ -180,11 +183,54 @@ function callRandom() {
 
 };
 
+// function theTridentOfPoseidon() {
+
+//   for (var i=0; i <10; i++) {
+//     $(".beer-search-container").append("<tr>")
+//       .append("<td>" + beerName + "</td>")
+//       .append("<td>" + breweryName + "</td>")
+//       .append("<td>" + style + "</td>")
+//       .append("<td>" + abv + "</td>")
+//       .append("<td>" + ibu + "</td>")
+//       .append("<td>" + breweryAddress + "</td>")
+//   }
+
+// };
+
+function createContainer(){
+
+  var displayDivCon = '<div class="result">' +
+  '<img class="beer-image"> ' +
+  '<div class="beer-name">' + '<a href="#beer">Beer Name</a>' + '</div>' +
+  '<ol>' +
+    '<li>Brewery</li>' +
+    '<li>Style</li>' +
+    '<li>beer :</li>' +
+    '<li>' +'<a href="#directions">Directions</a>'+'</li>' +
+  
+  '</ol>' +
+  
+  '</div>'
+
+  var displayDivCon2  = $(".beer-search-container").append(displayDivCon)
+
+  displayDivCon2 .append(displayDivCon)
+
+
+}
+
+
+
+
 $("#primary-search").click(function () {
   event.preventDefault()
   //TODO: Input verification
   //TODO: create attribute or value to differentiate between zip code entry and beer entry
+  
+  var value = $("#beer-search").val()
+  var inputVal = $.isNumeric(value)
   var searchParameter = $('.dropdown').val();
+  console.log(value)
 
   if (searchParameter === "random") {
     // callRandom();
@@ -196,7 +242,17 @@ $("#primary-search").click(function () {
     callLocation();
     console.log(searchParameter)
   }
-
+    console.log(inputVal)
+    console.log(value.length)
+  if (value.length > 5 && inputVal === true ){
+    $("#beer-search").val("")
+    $("#beer-search").attr("placeholder", "Not a valid zipcode! Please enter a correct zipcode")
+    
+    return false;
+   // alert("Not valid Zipcode")
+  }
+  
+  // if{searchParameter === }
   //TODO: Ensure the below code dynamically creates what we want
   $(".beer-search-container").css({ display: "block" })
   $(".beer-buddy-title").css({ display: "none" })
@@ -205,21 +261,30 @@ $("#primary-search").click(function () {
   $(".search-option ").css({ display: "block" })
   $(".nav-bar2-container").css({ display: "block" })
   $(".link-container").css({ display: "none" })
-  $(".search-option ").css({ top: "-165px" })
+
+  $(".search-option ").css({ bottom: "17px" })
   $("#buddy").css({ position: "relative" })
-  $("#buddy").css({ top: "-30px" })
+  $("#buddy").css({ bottom: "13px" })
+
   $("#map").css({ display: "block" })
   $(".zip").css({ display: "none" })
-<<<<<<< HEAD
-  $(".dropdown").css({ display: "none" })
-});
-=======
-})
->>>>>>> 8fd86a8c32bcc2b4b0d5189cb7a304bfb849cb0c
 
-function pageTwo() {
-  //TODO: ENsure this creates 10 cards as per For loop callback
-  //TODO: Only one link to var website
+  $(".dropdown").css({ display: "none" })
+
+createContainer()
+
+});
+
+})
+
+
+// function pageTwo() {
+
+
+
+
+//   //TODO: ENsure this creates 10 cards as per For loop callback
+//   //TODO: Only one link to var website
 
   $(".beer-search-container").html($("<div>", { class: "result" }))
   $(".result").html($("<img>", { class: "beer-image" }))
@@ -274,7 +339,7 @@ function pageTwo() {
   link2.text(website);
 
   $(".list-three").html(link2);
-}
+//}
 
 function pageTwoLocation() {
   //TODO: ENsure this creates 10 cards as per For loop callback
