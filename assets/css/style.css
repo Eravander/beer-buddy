@@ -28,8 +28,8 @@ max-height: 760px;
     overflow: hidden;
     display: none;
     height: 55px;
-    
-    
+
+
   }
 
  .nav-bar1, .nav-bar2-container{
@@ -53,7 +53,7 @@ max-height: 760px;
  #home-link{
     display: inline;
     padding-right: 20px;
-  
+
   }
 
   .list-one, .list-two , .list-three , .list-three a{
@@ -69,7 +69,7 @@ max-height: 760px;
   li a{
     text-decoration: none;
     color: white;
-    
+
   }
 
   .beer-link{
@@ -109,13 +109,13 @@ max-height: 760px;
    top: 36px;
    right:45px;
   }
-  
+
   .search-option {
     float: right;
     display: none;
     /* using absolute position will have to fixed to create sticky effect later*/
     position: relative;
-    
+
     bottom: 100px;
   }
   .beer-nav-search{
@@ -131,53 +131,53 @@ max-height: 760px;
    right: 50px;
    width: 200px;
   }
-  
+
   .round {
     width: 90%;
   }
   .round-two, .round {
-    
+
     border-radius: 30px;
     padding: 5px 5px 5px 25px;
     z-index: 10;
-    background-color: white; 
-    
+    background-color: white;
+
 }
 #search-button{
   position: absolute;
   right: 253px;
   top: 28px;
 }
-  
+
   .middle-container{
-    
+
     width: 80%;
     border: 1px solid black;
     height: 500px;
     position: absolute;
     left: 10%;
   }
-  
+
   .title-container{
     width: 100%;
     border: 1px solid black;
   }
-  
 
-  
+
+
   .search-nav-text{
     color: white;
     position: relative;
     bottom: 5px;
-    
+
   }
 
   .search-text{
     position: relative;
-    left: 30%; 
+    left: 30%;
   }
-  
-  
+
+
   #beer-search{
   position: relative;
   left: 20%;
@@ -185,7 +185,7 @@ max-height: 760px;
   height: 50px;
   top: 80px;
   }
-  
+
   .beer-search-container{
   display: none;
   width: 50%;
@@ -193,19 +193,18 @@ max-height: 760px;
   position: relative;
   left:5%;
   background-color:rgba(155, 145, 145, 0.3);
-  text-decoration: none;
-  
+
   /*add all classes that need to not be displayed to hide class*/
   /*display: none;
   }
-  
+
   .result{
     position: relative;
     width: 40%;
     border-bottom: 1px solid black;
-    left: 30%; 
+    left: 30%;
   }
-  
+
   .hide{
     /*display:none;*/
   }
@@ -220,7 +219,7 @@ max-height: 760px;
   .beer-name{
    
     border-bottom: 1px solid gray;
-    width:90%; 
+    width:90%;
     position: relative;
     left: 25px;
   }
@@ -243,7 +242,7 @@ max-height: 760px;
     border: none;
     border-left: 1px solid gray;
   }
-  
+
 #map {
     height: 400px;  /* The height is 400 pixels */
     width: 500px;  /* The width is the width of the web page */
@@ -274,10 +273,10 @@ max-height: 760px;
     #search-button {right: 321px }
     .dropdown{width: 180px;}
    }
-  
-    
-  
-  
+
+
+
+
   @media only screen and (max-width: 640px){
    .beer-buddy-title{left: 11px;}
    #beer-search{width: 35em;}
@@ -294,4 +293,4 @@ max-height: 760px;
    #buddy{left: 11px}
   }
   
-  
+
