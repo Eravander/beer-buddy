@@ -95,7 +95,7 @@ function callLocation() {
     var result = response.data;
 
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 5; i++) {
       breweryName = result[i].brewery.name;
       brewLat = result[i].latitude;
       brewLng = result[i].longitude;
@@ -105,11 +105,21 @@ function callLocation() {
       breweryRegion = result[i].region
       //new markers added
       marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
-      pageTwo();
+      pageTwoLocation();
+
+      // var beerDiv = $("<div>")
+      // var breweryNameDisplay = $("<h2>").text(result[i].brewery.name);
+      // var breweryAddress = $("<h3>").text(result[i].streetAddress);
+      // var breweryWebsite = $("<p>").text(result[i].website);
+
+      // $("#results").append(beerDiv);
+      // beerDiv.append(breweryNameDisplay);
+      // beerDiv.append(breweryAddress);
+      // beerDiv.append(breweryWebsite);
 
       // if (breweryOpen === "Y") {
       //   console.log("Open: " + breweryName)
-      //   var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
+      //   marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
       //   pageTwo();
       // } else {
       //   console.log("Closed: " + breweryName)
@@ -154,7 +164,7 @@ function callRandom() {
       console.log(response)
       var result = response.data;
 
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < 1; i++) {
         beerName = result[i].name;
         breweryName = result[i].breweries[0].name;
         brewLat = result[i].breweries[0].locations[0].latitude;
@@ -181,10 +191,10 @@ $("#primary-search").click(function () {
   var searchParameter = $('.dropdown').val();
 
   if (searchParameter === "random") {
-    callRandom();
+    // callRandom();
     console.log(searchParameter)
   } else if (searchParameter === "beer") {
-    callBeer();
+    // callBeer();
     console.log(searchParameter)
   } else if (searchParameter === "zip-code") {
     callLocation();
@@ -205,7 +215,7 @@ $("#primary-search").click(function () {
   $("#map").css({ display: "block" })
   $(".zip").css({ display: "none" })
   $(".dropdown").css({ display: "none" })
-})
+});
 
 function pageTwo() {
   //TODO: ENsure this creates 10 cards as per For loop callback
@@ -266,3 +276,48 @@ function pageTwo() {
   $(".list-three").html(link2);
 }
 
+function pageTwoLocation() {
+  //TODO: ENsure this creates 10 cards as per For loop callback
+  //TODO: Only one link to var website
+
+  var newBeerDiv = $("<div>", { class: "result" })
+  $(".result").html($("<img>", { class: "beer-image" }))
+  $(".beer-image").after($("<div>", { class: "beer-name" }))
+  //anchor tags are missing links
+
+
+  var link = $("<a>");
+  link.attr("href", "#beer");
+  link.text(beerName);
+  link.addClass("beer-link");
+
+
+
+  $(".beer-name").html(link);
+  $(".beer-link").after($("<ul>", { class: "list" }))
+
+
+
+  var li = $("<li>");
+  li.text(breweryName)
+  li.addClass("list-one");
+  $(".list").html(li)
+
+  var li2 = $("<li>");
+  li2.text(breweryAddress)
+  li2.addClass("list-two");
+  $(".list-one").after(li2)
+
+  var li3 = $("<li>");
+  li3.text(breweryRegion)
+  li3.addClass("list-three");
+  $(".list-two").after(li3)
+
+  var link2 = $("<a>");
+  link2.attr("href", website);
+  link2.text(website);
+
+  $(".list-three").html(link2);
+
+  $(".beer-search-container").append(newBeerDiv);
+}
