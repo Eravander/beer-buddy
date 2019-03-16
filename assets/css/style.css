@@ -7,6 +7,7 @@ max-width: 1366px;
 max-height: 760px;
 }
 
+
 .beer-buddy-title{
     clear: both;
     text-align: center;
@@ -41,7 +42,7 @@ max-height: 760px;
   color: black;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+ 
  }
 
  #home-link{
@@ -60,7 +61,11 @@ max-height: 760px;
     color: #000;
     list-style: none;
   }
-
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+  
   li a{
     text-decoration: none;
     color: white;
@@ -188,6 +193,7 @@ max-height: 760px;
   position: relative;
   left:5%;
   background-color:rgba(155, 145, 145, 0.3);
+  text-decoration: none;
   
   /*add all classes that need to not be displayed to hide class*/
   /*display: none;
@@ -212,21 +218,21 @@ max-height: 760px;
   }
 
   .beer-name{
-    border-top: 1px solid gray;
+   
     border-bottom: 1px solid gray;
     width:90%; 
     position: relative;
     left: 25px;
   }
 
-.zip2{
+/* .zip2{
   position: relative;
   width: 60px;
   left: 68%;
   top: -38px;
   border: none;
  border-left: 1px solid gray;
-}
+} */
 
   .zip{
     position: relative;
@@ -245,7 +251,7 @@ max-height: 760px;
     left: 60%;
     position: absolute;
     overflow: hidden;
-    bottom: 90px;
+    bottom: 102px;
    }
 
    @media only screen and (max-width: 980px){
@@ -287,4 +293,5 @@ max-height: 760px;
    .round-two{right: 194px;}
    #buddy{left: 11px}
   }
+  
   
