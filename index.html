@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tanya added Bootstrap CSS -->
-  
+
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -22,33 +22,33 @@
 </head>
 
 <body background="assets\images\beerimage11.jpg" style="background-size: 1366px 768px">
-  
+
 
 
 
   <div class="main-container">
 
-      <ul class="nav-bar2-container">
-          <div class="search-option hide">
-              <label for="search" class="search-nav-text">
-             
-              </label>
-              <!--put search button-->
-              <div class="round-two" >
-                  <input type="text" class="form-control beer-nav-search "  placeholder="Search Your Fav Beer">
-              </div>
-              
-              
-              <button id="search-button" type="submit" class="btn btn-secondary ">Search</button>
-            </div>
+    <ul class="nav-bar2-container">
+      <div class="search-option hide">
+        <label for="search" class="search-nav-text">
 
-          <li class="nav-bar2"><a class="active" href="#home">
-              <h1 id="buddy">Beer Buddy</h1>
-            </a></li>
-          <li class="nav-bar2"><a href="#home">Home</a></li>
-          <li class="nav-bar2"><a href="#news">How the app works</a></li>
-          <li class="nav-bar2"><a href="#about">About Team</a></li>
-        </ul>
+        </label>
+        <!--put search button-->
+        <div class="round-two">
+          <input type="text" class="form-control beer-nav-search " placeholder="Search Your Fav Beer">
+        </div>
+
+
+        <button id="search-button" type="submit" class="btn btn-secondary ">Search</button>
+      </div>
+
+      <li class="nav-bar2"><a class="active" href="#home">
+          <h1 id="buddy">Beer Buddy</h1>
+        </a></li>
+      <li class="nav-bar2"><a href="#home">Home</a></li>
+      <li class="nav-bar2"><a href="#news">How the app works</a></li>
+      <li class="nav-bar2"><a href="#about">About Team</a></li>
+    </ul>
 
     <div class="link-container">
       <ul class="nav-bar1">
@@ -59,7 +59,7 @@
 
     </div>
 
-    
+
 
 
     <h1 class="beer-buddy-title">Beer Buddy</h1>
@@ -71,12 +71,12 @@
         </label>
         <input type="text" class="form-control round" id="beer-search" placeholder="Search Your Favorite Beer">
         <select class="dropdown">
-          <option value = "random">Random</option>
-          <option value = "zip-code">Zip Code</option>
-          <option value = "beer">Beer Name</option>
+          <option value="random">Random</option>
+          <option value="zip-code">Zip Code</option>
+          <option value="beer">Beer Name</option>
 
         </select>
-      <!--<input type="text"  class="form-control zip" placeholder="Zip Code" title="Please enter a Zip Code" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$">-->  
+        <!--<input type="text"  class="form-control zip" placeholder="Zip Code" title="Please enter a Zip Code" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$">-->
       </div>
       <button id="primary-search" type="submit" class="btn btn-secondary ">Find My Beer Now!</button>
     </form>
@@ -102,13 +102,7 @@
 
 
   <script src="assets/javascript/config.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=
-   AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI
-   &callback=initMap">
-  </script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
-    </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <script src="assets/javascript/logic.js"></script>
@@ -120,6 +114,9 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <script src="assets/javascript/logic.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBx7uftwsmJHl5cTRUg41_55aU1iglxI&callback=initMap">
+    </script>
 </body>
 
 </html>

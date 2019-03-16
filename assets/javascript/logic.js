@@ -1,4 +1,6 @@
 // variable names
+var map;
+var marker;
 var beerName;
 var breweryName;
 var brewLat;
@@ -20,7 +22,7 @@ function initMap() {
   // The location of kansas
   var breweryMapData = { lat: 39.0119, lng: -98.4842 };
   // The map, centered at kansas
-  var map = new google.maps.Map(
+  map = new google.maps.Map(
     document.getElementById('map'), { zoom: 3.5, center: breweryMapData });
 
 }
@@ -52,7 +54,7 @@ function callBeer() {
       });
 
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 1; i++) {
       beerName = result[i].name;
       breweryName = result[i].breweries[0].name;
       brewLat = result[i].breweries[0].locations[0].latitude;
@@ -62,7 +64,11 @@ function callBeer() {
       ibu = result[i].ibu;
       website = result[i].breweries[0].website;
       //placed new markers
-      var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
+      marker = new google.maps.Marker({
+        position: { lat: brewLat, lng: brewLng },
+        map: map,
+        content: breweryName,
+      });
       //TODO: Dynamically create display card 
       pageTwo();
     }
@@ -98,7 +104,7 @@ function callLocation() {
       breweryOpen = result[i].openToPublic
       breweryRegion = result[i].region
       //new markers added
-      var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
+      marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
       pageTwo();
 
       // if (breweryOpen === "Y") {
@@ -158,7 +164,7 @@ function callRandom() {
         ibu = result[i].ibu;
         website = result[i].breweries[0].website;
         //new markers added
-        var marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
+        marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
         pageTwo();
       }
 
@@ -186,19 +192,19 @@ $("#primary-search").click(function () {
   }
 
   //TODO: Ensure the below code dynamically creates what we want
-  $(".beer-search-container").css({display:"block"})
-  $(".beer-buddy-title").css({display:"none"})
-  $("#beer-search").css({display:"none"})
-  $("#primary-search").css({display:"none"})
-  $(".search-option ").css({display:"block"})
-  $(".nav-bar2-container").css({display:"block"})
-  $(".link-container").css({display:"none"})
-  $(".search-option ").css({top:"-20px"})
-  $("#buddy").css({position:"relative"})
-  $("#buddy").css({top:"-14px"})
-  $("#map").css({display:"block"})
-  $(".zip").css({display:"none"})
-  $(".dropdown").css({display:"none"})
+  $(".beer-search-container").css({ display: "block" })
+  $(".beer-buddy-title").css({ display: "none" })
+  $("#beer-search").css({ display: "none" })
+  $("#primary-search").css({ display: "none" })
+  $(".search-option ").css({ display: "block" })
+  $(".nav-bar2-container").css({ display: "block" })
+  $(".link-container").css({ display: "none" })
+  $(".search-option ").css({ top: "-20px" })
+  $("#buddy").css({ position: "relative" })
+  $("#buddy").css({ top: "-14px" })
+  $("#map").css({ display: "block" })
+  $(".zip").css({ display: "none" })
+  $(".dropdown").css({ display: "none" })
 })
 
 function pageTwo() {
