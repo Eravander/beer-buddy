@@ -32,7 +32,7 @@ function initMap() {
 // this function will search for and return information on a beer entered
 function callBeer() {
 
-  var queryURL = "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/search";
+  var queryURL = "https://immense-savannah-32940.herokuapp.com/https://api.brewerydb.com/v2/search";
   var search = $("#beer-search").val();
 
   $.ajax({
@@ -51,12 +51,12 @@ function callBeer() {
     var coords = { lat: result[0].breweries[0].locations[0].latitude, lng: result[0].breweries[0].locations[0].longitude };
     map = new google.maps.Map(
       document.getElementById('map'), {
-        zoom: 3.5,
+        zoom: 8,
         center: coords
       });
 
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 1; i++) {
       beerName = result[i].name;
       breweryName = result[i].breweries[0].name;
       brewLat = result[i].breweries[0].locations[0].latitude;
@@ -78,7 +78,7 @@ function callBeer() {
 //This function takes a postal code and returns breweries within a 10 mile radius
 function callLocation() {
 
-  var queryURL = "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations";
+  var queryURL = "https://immense-savannah-32940.herokuapp.com/https://api.brewerydb.com/v2/locations";
   var search = $("#beer-search").val();
 
   $.ajax({
@@ -93,7 +93,7 @@ function callLocation() {
     var result = response.data;
 
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 1; i++) {
       breweryName = result[i].brewery.name;
       brewLat = result[i].latitude;
       brewLng = result[i].longitude;
@@ -115,7 +115,6 @@ function callLocation() {
       // beerDiv.append(breweryAddress);
       // beerDiv.append(breweryWebsite);
 
-
       // if (breweryOpen === "Y") {
       //   console.log("Open: " + breweryName)
       //   marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
@@ -133,7 +132,7 @@ function callLocation() {
 
 //This function calls a random beer, then stores its name as a variable to run through the GET beer search function
 function callRandom() {
-  var queryURL = "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/beer/random";
+  var queryURL = "https://immense-savannah-32940.herokuapp.com/https://api.brewerydb.com/v2/beer/random";
 
   $.ajax({
     url: queryURL,
@@ -147,7 +146,7 @@ function callRandom() {
 
     beerName = result.name;
 
-    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/search";
+    var queryURL = "https://immense-savannah-32940.herokuapp.com/https://api.brewerydb.com/v2/search";
 
     $.ajax({
       url: queryURL,
@@ -174,7 +173,7 @@ function callRandom() {
         website = result[i].breweries[0].website;
         //new markers added
         marker = new google.maps.Marker({ position: { lat: brewLat, lng: brewLng }, map: map });
-       // pageTwo();
+       pageTwo();
       }
 
     });
@@ -197,27 +196,27 @@ function callRandom() {
 
 // };
 
-function createContainer(){
+// function createContainer(){
 
-  var displayDivCon = '<div class="result">' +
-  '<img class="beer-image"> ' +
-  '<div class="beer-name">' + '<a href="#beer">Beer Name</a>' + '</div>' +
-  '<ol>' +
-    '<li>Brewery</li>' +
-    '<li>Style</li>' +
-    '<li>beer :</li>' +
-    '<li>' +'<a href="#directions">Directions</a>'+'</li>' +
+//   var displayDivCon = '<div class="result">' +
+//   '<img class="beer-image"> ' +
+//   '<div class="beer-name">' + '<a href="#beer">Beer Name</a>' + '</div>' +
+//   '<ol>' +
+//     '<li>Brewery</li>' +
+//     '<li>Style</li>' +
+//     '<li>beer :</li>' +
+//     '<li>' +'<a href="#directions">Directions</a>'+'</li>' +
   
-  '</ol>' +
+//   '</ol>' +
   
-  '</div>'
+//   '</div>'
 
-  var displayDivCon2  = $(".beer-search-container").append(displayDivCon)
+//   var displayDivCon2  = $(".beer-search-container").append(displayDivCon)
 
-  displayDivCon2 .append(displayDivCon)
+//   displayDivCon2 .append(displayDivCon)
 
 
-}
+// }
 
 
 
@@ -233,10 +232,10 @@ $("#primary-search").click(function () {
   console.log(value)
 
   if (searchParameter === "random") {
-    // callRandom();
+    callRandom();
     console.log(searchParameter)
   } else if (searchParameter === "beer") {
-    // callBeer();
+    callBeer();
     console.log(searchParameter)
   } else if (searchParameter === "zip-code") {
     callLocation();
@@ -261,24 +260,19 @@ $("#primary-search").click(function () {
   $(".search-option ").css({ display: "block" })
   $(".nav-bar2-container").css({ display: "block" })
   $(".link-container").css({ display: "none" })
-
   $(".search-option ").css({ bottom: "17px" })
   $("#buddy").css({ position: "relative" })
   $("#buddy").css({ bottom: "13px" })
-
   $("#map").css({ display: "block" })
   $(".zip").css({ display: "none" })
-
   $(".dropdown").css({ display: "none" })
-
-createContainer()
-
-});
-
+  //createContainer()
+ //theTridentOfPoseidon()
+ pageTwo()
 })
 
 
-// function pageTwo() {
+ function pageTwo() {
 
 
 
@@ -305,8 +299,8 @@ createContainer()
 
 
   var li = $("<li>");
-  li.text(breweryName)
   li.addClass("list-one");
+  li.text(breweryName)
   $(".list").html(li)
 
   var li2 = $("<li>");
@@ -339,7 +333,7 @@ createContainer()
   link2.text(website);
 
   $(".list-three").html(link2);
-//}
+}
 
 function pageTwoLocation() {
   //TODO: ENsure this creates 10 cards as per For loop callback

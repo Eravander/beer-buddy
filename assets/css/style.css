@@ -19,6 +19,7 @@ max-height: 760px;
 
   .nav-bar1{
     height: 33px;
+    
   }
 
   .nav-bar2-container{
@@ -50,7 +51,7 @@ max-height: 760px;
  }
 
  #intruction-link,
- #home-link{
+ #home-link,#about{
     display: inline;
     padding-right: 20px;
 
@@ -92,7 +93,15 @@ max-height: 760px;
     top: 85px;
     left: 42%;
   }
-
+  .dropdown-two{
+    position: relative;
+    top: 34px;
+    right: 62px;
+    z-index: 12;
+    border: none;
+    border-left: 1px solid grey;
+    width: 80px;
+  }
   .dropdown{
     position: absolute;
     left: 70%;
@@ -193,7 +202,8 @@ max-height: 760px;
   position: relative;
   left:5%;
   background-color:rgba(155, 145, 145, 0.3);
-
+  text-decoration: none;
+  
   /*add all classes that need to not be displayed to hide class*/
   /*display: none;
   }
@@ -293,4 +303,4 @@ max-height: 760px;
    #buddy{left: 11px}
   }
   
-
+  
