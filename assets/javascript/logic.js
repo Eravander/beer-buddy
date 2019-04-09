@@ -253,19 +253,40 @@ $("#primary-search").click(function () {
   
   // if{searchParameter === }
   //TODO: Ensure the below code dynamically creates what we want
-  $(".beer-search-container").css({ display: "block" })
-  $(".beer-buddy-title").css({ display: "none" })
-  $("#beer-search").css({ display: "none" })
-  $("#primary-search").css({ display: "none" })
-  $(".search-option ").css({ display: "block" })
-  $(".nav-bar2-container").css({ display: "block" })
-  $(".link-container").css({ display: "none" })
+
+// display second-page without effect
+
+  // $(".beer-search-container").css({ display: "block" })
+  // $(".beer-buddy-title").css({ display: "none" })
+  // $("#beer-search").css({ display: "none" })
+  // $("#primary-search").css({ display: "none" })
+  // $(".search-option ").css({ display: "block" })
+  // $(".nav-bar2-container").css({ display: "block" })
+  // $(".link-container").css({ display: "none" })
+  // $(".search-option ").css({ bottom: "17px" })
+  // $("#buddy").css({ position: "relative" })
+  // $("#buddy").css({ bottom: "13px" })
+  // $("#map").css({ display: "block" })
+  // $(".zip").css({ display: "none" })
+  // $(".dropdown").css({ display: "none" })
+
+
+// display second-page with fade in and out transition
+
+  $(".beer-search-container").fadeIn(1000)
+  $(".beer-buddy-title").fadeOut(1700)
+  $("#beer-search").fadeOut(1700)
+  $("#primary-search").fadeOut(1700)
+  $(".search-option ").fadeIn(1800)
+  $(".nav-bar2-container").fadeIn(1800)
+  $(".link-container").fadeOut(1700)
   $(".search-option ").css({ bottom: "17px" })
   $("#buddy").css({ position: "relative" })
   $("#buddy").css({ bottom: "13px" })
-  $("#map").css({ display: "block" })
+  $("#map").fadeIn(2400)
   $(".zip").css({ display: "none" })
-  $(".dropdown").css({ display: "none" })
+  $(".dropdown").fadeOut(1700)
+
   //createContainer()
  //theTridentOfPoseidon()
  pageTwo()
