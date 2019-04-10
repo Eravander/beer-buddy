@@ -273,19 +273,19 @@ $("#primary-search").click(function () {
 
 // display second-page with fade in and out transition
 
-  $(".beer-search-container").fadeIn(1000)
-  $(".beer-buddy-title").fadeOut(1700)
-  $("#beer-search").fadeOut(1700)
-  $("#primary-search").fadeOut(1700)
-  $(".search-option ").fadeIn(1800)
-  $(".nav-bar2-container").fadeIn(1800)
-  $(".link-container").fadeOut(1700)
+  $(".beer-search-container").fadeIn(3000)
+  $(".beer-buddy-title").fadeOut(1500)
+  $("#beer-search").fadeOut(1500)
+  $("#primary-search").fadeOut(1500)
+  $(".search-option ").fadeIn(3000)
+  $(".nav-bar2-container").fadeIn(5000)
+  $(".link-container").fadeOut(1500)
   $(".search-option ").css({ bottom: "17px" })
   $("#buddy").css({ position: "relative" })
   $("#buddy").css({ bottom: "13px" })
-  $("#map").fadeIn(2400)
+  $("#map").fadeIn(5000)
   $(".zip").css({ display: "none" })
-  $(".dropdown").fadeOut(1700)
+  $(".dropdown").fadeOut(1500)
 
   //createContainer()
  //theTridentOfPoseidon()
